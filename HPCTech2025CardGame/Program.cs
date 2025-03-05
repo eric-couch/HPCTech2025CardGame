@@ -8,9 +8,11 @@ Deck myDeck = new Deck();
 // comment: ctrl + (k then c)
 // uncomment: ctrl + (k then u)
 
-List<Card> cards = myDeck.DealCard(5);
+List<Card> hand = myDeck.DealCard(5);
 
-foreach(Card card in cards)
+foreach(Card card in hand)
 {
     Console.Write($"{card} ");
 }
+
+Console.WriteLine($"Has a pair in it? {FiveCardDraw.IsPair(hand)}");
